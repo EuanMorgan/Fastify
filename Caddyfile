@@ -1,0 +1,7 @@
+todo.euanmorgan.com {
+    reverse_proxy todo-app:4000 {
+        # Request the container todo app on port 400
+        # Improve site security
+        header_down Strict-Transport-Security "max-age=31536000;"
+    }
+}

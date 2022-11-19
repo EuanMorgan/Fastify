@@ -19,9 +19,5 @@ WORKDIR /src
 # Build app
 RUN npm run-script build
 
-## TODO rm before deployment
-## We will use Caddy to reverse proxy into the container
-EXPOSE 4000
-
 # Start app, we specified in tsconfig that the output is in build
 CMD ["node", "build/src/app.js"]

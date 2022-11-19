@@ -7,7 +7,22 @@ services:
       - NODE_ENV=production
     build:
       context: ./
+  caddy:
+    image: caddy/caddy:2.2.1-alpine
+    container_name: caddy-services
+    restart: unless-stopped
     ports:
-      # map internal port 4000 to external port 4000
-      # dont need when we reverse proxy
-      - 4000:4000
+      - 80:80 # we can accept on http and redirect to https
+      - 443:443 # https
+    volumes:
+      - $PWD/Caddyfile:/etc/caddy/Caddyfile
+      - $PWD/site:/services
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:
+# Caddy is like Apache or NGINX, but simpler and more powerful
+# https://caddyserver.com/docs/caddyfile
+# It will grab an SSL certificate and manage for you
