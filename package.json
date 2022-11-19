@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev": "tsx watch src/app.ts"
+    "dev": "tsx watch src/app.ts",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@fastify/swagger": "^8.1.0",
@@ -21,7 +22,7 @@
     "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.2.0",
     "@types/node": "^18.11.9",
-    "husky": "^8.0.2",
+    "husky": "^8.0.0",
     "pino-pretty": "^9.1.1",
     "prettier": "^2.7.1",
     "tsx": "^3.12.1",
