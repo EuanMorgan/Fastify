@@ -1,32 +1,35 @@
 {
-  "name": "RealisticSimulation",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsx watch src/app.ts",
-    "prepare": "husky install"
-  },
-  "dependencies": {
-    "@fastify/swagger": "^8.1.0",
-    "@fastify/type-provider-json-schema-to-ts": "^2.1.1",
-    "@sinclair/typebox": "^0.25.8",
-    "@typegoose/typegoose": "^9.12.1",
-    "env-schema": "^5.1.1",
-    "fastify": "^4.10.0",
-    "mongoose": "^6.7.2",
-    "nanoid": "3.3.4"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^17.2.0",
-    "@commitlint/config-conventional": "^17.2.0",
-    "@types/node": "^18.11.9",
-    "husky": "^8.0.0",
-    "pino-pretty": "^9.1.1",
-    "prettier": "^2.7.1",
-    "tsx": "^3.12.1",
-    "typescript": "^4.9.3",
-    "vitest": "^0.25.2"
-  }
+	"name": "RealisticSimulation",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsx watch src/app.ts",
+		"prepare": "husky install"
+	},
+	"dependencies": {
+		"@fastify/swagger": "^8.1.0",
+		"@fastify/type-provider-json-schema-to-ts": "^2.1.1",
+		"@sinclair/typebox": "^0.25.8",
+		"@typegoose/typegoose": "^9.12.1",
+		"env-schema": "^5.1.1",
+		"fastify": "^4.10.0",
+		"mongoose": "^6.7.2",
+		"nanoid": "3.3.4"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.2.0",
+		"@commitlint/config-conventional": "^17.2.0",
+		"@types/node": "^18.11.9",
+		"husky": "^8.0.0",
+		"pino-pretty": "^9.1.1",
+		"prettier": "^2.7.1",
+		"tsx": "^3.12.1",
+		"typescript": "^4.9.3",
+		"vitest": "^0.25.2"
+	},
+	"lint-staged": {
+		"**/*": "prettier --write --ignore-unknown"
+	}
 }
