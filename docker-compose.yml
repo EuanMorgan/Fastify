@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  todo-app:
+    container_name: todo-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    build:
+      context: ./
+    ports:
+      # map internal port 4000 to external port 4000
+      # dont need when we reverse proxy
+      - 4000:4000

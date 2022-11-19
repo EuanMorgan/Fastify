@@ -6,9 +6,7 @@ import swagger from "@fastify/swagger";
 import swaggerUi from "@fastify/swagger-ui";
 import { version } from "../../package.json";
 export const createServer = async () => {
-	const app = fastify({
-		logger: envToLogger[config.NODE_ENV],
-	});
+	const app = fastify();
 
 	app.register(swagger, {
 		swagger: {
