@@ -1,4 +1,4 @@
-todo.euanmorgan.com {
+todo.euanmorgan.uk {
     reverse_proxy todo-app:4000 {
         # Request the container todo app on port 400
         # Improve site security
